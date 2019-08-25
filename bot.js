@@ -7,7 +7,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.on('ready', function () {
     console.log('Bot Connected')
-    client.user.setActivity('Kingdom bot', {type: 'PLAYING'})
+    client.user.setActivity('Kingdom Bot ( prefix: + )', {type: 'PLAYING'})
 })
 
 client.on('guildMemberAdd', member =>{
