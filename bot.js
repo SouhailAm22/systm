@@ -92,7 +92,7 @@ client.on("message", message => {
     if(args[0].toLowerCase() === prefix + "unmute"){
         let member = message.mentions.members.first()
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("**Adak l7mar !** `You dont have the permission to use this command !` :warning: ")
-        if(!member) return message.channel.send(" **I C'ant found this member** ")
+        if(!member) return message.channel.send(" `I C'ant found this member` ! :warning: ")
         if(member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send("`You c'ant unmute this member.` :warning: ")
         if(member.highestRole.calculatedPosition >= message.guild.me.highestRole.calculatedPosition || member.id ===  message.guild.ownerID) return message.channel.send("`I c'ant unmute this member.` :warning: ")
         let muterole = message.guild.roles.find(role => role.name === 'Muted')
